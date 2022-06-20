@@ -11,7 +11,7 @@
     </a>
   </h1> 
 
-  <app-date-picker></app-date-picker>
+  <app-date-picker (newItemEvent)="selectedDate($event)"></app-date-picker>
 
   {{selectedYear}} - {{selectedDay}}
 

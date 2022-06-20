@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-date-picker',
@@ -6,16 +7,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./date-picker.component.css']
 })
 export class DatePickerComponent implements OnInit {
+  @Output() newItemEvent = new EventEmitter<selectedDate>();
+
   selectedYear:number = 0;
   selectedDay:number  = 0;
   years: number[] = [];
   days: number[] = [];
 
-  ngOnInit(): void {
+  constructor() {
     this.determineAvailableYears();
     this.selectedYear = this.getLatestYear();
     this.determineAvailableDays();
     this.selectedDay = this.getLatestDay();
+  }
+
+  ngOnInit(): void {
+    // this.sendNewSelectedDate({
+    //   year: this.selectedYear,
+    //   day: this.selectedDay
+    // });
+  }
+
+  sendNewSelectedDate(value: selectedDate) {
+    this.newItemEvent.emit(value);
   }
 
   determineAvailableYears(): void {
@@ -62,5 +76,15 @@ export class DatePickerComponent implements OnInit {
       this.selectedYear = value;
       this.determineAvailableDays();
     }
+
+    this.sendNewSelectedDate({
+      year: this.selectedYear,
+      day: this.selectedDay
+    });
   }
+}
+
+export interface selectedDate {
+  year: number;
+  day: number;
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DatePipe } from '@angular/common';
+import { selectedDate } from '../app/date-picker/date-picker.component'
 
 @Component({
   selector: 'app-root',
@@ -11,6 +11,11 @@ export class AppComponent {
   title = 'adventofcode';
   today = new Date();
 
-  selectedYear:number = 0;
-  selectedDay:number  = 0;
+  selectedYear: number = 0;
+  selectedDay: number  = 0;
+
+  selectedDate(newDate: selectedDate) {
+    this.selectedYear = newDate.year;
+    this.selectedDay = newDate.day;
+  }
 }

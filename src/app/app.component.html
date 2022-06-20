@@ -11,17 +11,7 @@
     </a>
   </h1> 
 
-  <!-- Year -->
-  <mat-button-toggle-group name="fontStyle" aria-label="Font Style" value="{{getLatestYear()}}">
-    <mat-button-toggle *ngFor="let year of years" value="{{year}}" (click)="setValue(year, 'year')">{{year}}</mat-button-toggle>
-  </mat-button-toggle-group>
-  <br>
-  
-  <!-- Day -->
-  <mat-button-toggle-group name="fontStyle" aria-label="Font Style" value="{{getLatestDay()}}">
-    <mat-button-toggle *ngFor="let day of days" value="{{day}}" (click)="setValue(day, 'day')">{{day}}</mat-button-toggle>
-  </mat-button-toggle-group>
-  <br>
+  <app-date-picker></app-date-picker>
 
   {{selectedYear}} - {{selectedDay}}
 

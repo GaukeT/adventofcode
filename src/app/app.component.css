@@ -15,12 +15,6 @@
     align-items: center;
   }
 
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3px  
-  }
-
   a {
     color: #333
   }

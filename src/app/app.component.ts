@@ -8,7 +8,7 @@ import { DatePipe } from '@angular/common';
 })
 
 export class AppComponent {
-  title = 'alphabet';
+  title = 'adventofcode';
   today = new Date();
 
   selectedYear:number = 0;
@@ -17,14 +17,14 @@ export class AppComponent {
   days: number[] = [];
 
   ngOnInit(): void {
-    console.log(new Date())
     this.determineAvailableYears();
+    this.selectedYear = this.getLatestYear();
     this.determineAvailableDays();
+    this.selectedDay = this.getLatestDay();
   }
 
   determineAvailableYears(): void {
     let latestYear = this.getLatestYear();
-    this.selectedYear = latestYear;
     for (let i = 2016; i <= latestYear; i++) {
       this.years.push(i);
     }
@@ -33,12 +33,9 @@ export class AppComponent {
   determineAvailableDays() : void {
     this.days = [];
     let latestDay = this.getLatestDay();
-    this.selectedDay = latestDay;
     for (let i = 1; i <= latestDay; i++) {
       this.days.push(i);
     }
-
-    console.log(this.days);
   }
 
   getLatestYear(): number {

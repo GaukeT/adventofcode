@@ -15,6 +15,8 @@ import { SettingsComponent } from './settings/settings.component';
 import { HomeComponent } from './home/home.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatBadgeModule } from '@angular/material/badge';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     DatePickerComponent,
     SettingsMenuComponent,
     SettingsComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatMenuModule,
     AppRoutingModule,
     MatInputModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

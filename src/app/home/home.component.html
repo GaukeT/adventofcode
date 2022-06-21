@@ -17,6 +17,14 @@
   <!-- {{selectedYear}} - {{selectedDay}} -->
   <hr>
   <h2>Answer</h2>
-  <p>part 1: 21356879</p>
-  <p>part 2: 45649987</p>
+  <p><span [matBadgeHidden]="part1Verified" 
+    matBadgeOverlap="false" 
+    mat-raised-button color="primary" 
+    matBadge="✓">Part 1: {{part1}}</span>
+  </p>
+  <p><span [matBadgeHidden]="part2Verified" 
+    matBadgeOverlap="false" 
+    mat-raised-button color="primary" 
+    matBadge="✓">Part 2: {{part2}}</span>
+  </p>
 </div>

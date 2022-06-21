@@ -1,0 +1,11 @@
+<div class="content">
+  <app-date-picker (newItemEvent)="selectedDate($event)"></app-date-picker>
+  <h1>
+    <a *ngIf="selectedYear > 0 && selectedDay > 0" href="https://adventofcode.com/{{selectedYear}}/day/{{selectedDay}}" target="_blank">
+      <button mat-icon-button>
+        <mat-icon>open_in_new</mat-icon>
+      </button>
+    </a>
+  </h1>   
+  {{selectedYear}} - {{selectedDay}}
+</div>

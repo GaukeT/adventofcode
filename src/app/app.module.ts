@@ -8,18 +8,29 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatButtonModule } from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { DatePickerComponent } from './date-picker/date-picker.component';
+import { SettingsMenuComponent } from './settings-menu/settings-menu.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { AppRoutingModule } from './app-routing.module';
+import { SettingsComponent } from './settings/settings.component';
+import { HomeComponent } from './home/home.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    DatePickerComponent
+    DatePickerComponent,
+    SettingsMenuComponent,
+    SettingsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonToggleModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatMenuModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

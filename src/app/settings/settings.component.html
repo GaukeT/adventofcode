@@ -1,1 +1,11 @@
-<p>settings works!</p>
+<div class="content">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>AOC Session cookie</mat-label>
+        <input matInput value="{{cookie}}" (focusout)="focusOutSessionCookie($event)">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Endpoint</mat-label>
+        <input disabled matInput value="{{endpoint}}" (focusout)="focusOutEndpoint($event)" placeholder="localhost">
+        <mat-hint>^ work in progress</mat-hint>
+    </mat-form-field>
+</div>

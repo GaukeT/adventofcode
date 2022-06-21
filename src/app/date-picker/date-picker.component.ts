@@ -22,10 +22,10 @@ export class DatePickerComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.sendNewSelectedDate({
-    //   year: this.selectedYear,
-    //   day: this.selectedDay
-    // });
+    this.sendNewSelectedDate({
+      year: this.selectedYear,
+      day: this.selectedDay
+    });
   }
 
   sendNewSelectedDate(value: selectedDate) {

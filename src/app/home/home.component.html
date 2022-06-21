@@ -1,11 +1,22 @@
 <div class="content">
   <app-date-picker (newItemEvent)="selectedDate($event)"></app-date-picker>
-  <h1>
+  <h3>
+    Assignment:
     <a *ngIf="selectedYear > 0 && selectedDay > 0" href="https://adventofcode.com/{{selectedYear}}/day/{{selectedDay}}" target="_blank">
       <button mat-icon-button>
         <mat-icon>open_in_new</mat-icon>
       </button>
     </a>
-  </h1>   
-  {{selectedYear}} - {{selectedDay}}
+    Input: 
+    <a *ngIf="selectedYear > 0 && selectedDay > 0" href="https://adventofcode.com/{{selectedYear}}/day/{{selectedDay}}/input" target="_blank">
+      <button mat-icon-button>
+        <mat-icon>open_in_new</mat-icon>
+      </button>
+    </a>
+  </h3>   
+  <!-- {{selectedYear}} - {{selectedDay}} -->
+  <hr>
+  <h2>Answer</h2>
+  <p>part 1: 21356879</p>
+  <p>part 2: 45649987</p>
 </div>
